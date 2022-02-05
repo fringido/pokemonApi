@@ -1,1 +1,13 @@
-<p>pokemons-list works!</p>
+<div class="pokemon--grid">
+    <mat-card class="pokemon--grid__box" *ngFor="let pokemon of pokemons">
+        <mat-card-title-group>
+            <mat-card-title>{{pokemon.name}}</mat-card-title>
+            <mat-card-subtitle>{{pokemon.types[0].type.name}}</mat-card-subtitle>
+            <img mat-card-md-image [src]="pokemon.sprites.front_default">
+        </mat-card-title-group>
+        <mat-card-content>
+            #{{pokemon.id}}
+        </mat-card-content>
+    </mat-card>
+
+</div>

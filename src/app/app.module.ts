@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { MaterialModule } from "./material.module";
 
 import { AppComponent } from './app.component';
 import { PokemonsListComponent } from './components/pokemons-list/pokemons-list.component';
@@ -23,6 +24,7 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
+    MaterialModule,
     HttpClientModule,
     AppRoutingModule
   ],

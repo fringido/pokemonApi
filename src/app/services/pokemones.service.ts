@@ -11,7 +11,7 @@ export class PokemonesService {
   constructor(private http: HttpClient) { }
 
   getPokemons(){
-    return this.http.get(`${this.API}/pokemon?limit=10`);
+    return this.http.get(`${this.API}/pokemon?limit=20`);
   }
 
   getMoreData(name:string){

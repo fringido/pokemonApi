@@ -1,139 +1,110 @@
 @import "../../../styles.scss";
-
 .container {
-  max-width: 1280px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-
-  h1 {
-    color: #fff;
-    font-size: 28px;
-    font-weight: 900;
-    text-transform: uppercase;
-
-    text-shadow:
-      0 0 5px rgba(0, 178, 255, 1),
-      0 0 10px rgba(0, 178, 255, 1),
-      0 0 20px rgba(0, 178, 255, 1),
-      0 0 40px rgba(38, 104, 127, 1);
-  }
-
-
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h1 {
+        color: #fff;
+        font-size: 28px;
+        font-weight: 900;
+        text-transform: uppercase;
+        text-shadow: 0 0 5px rgba(0, 178, 255, 1), 0 0 10px rgba(0, 178, 255, 1), 0 0 20px rgba(0, 178, 255, 1), 0 0 40px rgba(38, 104, 127, 1);
+    }
 }
 
 nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 99;
-  background-color: $darkPrincipal;
-  padding: 16px 32px;
-  border-bottom: 3px solid $color-primario;
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-color: $darkPrincipal;
+    padding: 16px 32px;
+    border-bottom: 3px solid $color-primario;
 }
 
 .movil-nav {
-  display: block;
-  position: relative;
-  z-index: 1;
-  user-select: none;
-  appearance: none;
-  border: none;
-  outline: none;
-  background: none;
-  cursor: pointer;
-  img {
-      max-width: 50px;
-  }
+    display: block;
+    position: relative;
+    z-index: 1;
+    user-select: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    img {
+        max-width: 50px;
+    }
 }
 
 .menu {
-  display: none;
-  flex: 1 1 0%;
-  justify-content: flex-end;
-  margin: 0 -16px;
-  transition: all ease-out .5s;
-
-  & a {
-    color: #fff;
-    margin: 0 16px;
-    text-decoration: none;
-    transition: 0.4s;
-    padding: 8px 16px;
-    text-transform: uppercase;
-
-    &:hover {
-
-      text-shadow: 0 0 5px rgba(0, 178, 255, 1),
-        0 0 10px rgba(0, 178, 255, 1),
+    display: none;
+    flex: 1 1 0%;
+    justify-content: flex-end;
+    margin: 0 -16px;
+    transition: all ease-out .5s;
+    & a {
+        color: #fff;
+        margin: 0 16px;
+        text-decoration: none;
+        transition: 0.4s;
+        padding: 8px 16px;
+        text-transform: uppercase;
+        &:hover {
+            text-shadow: 0 0 5px rgba(0, 178, 255, 1), 0 0 10px rgba(0, 178, 255, 1),
+        }
     }
-  }
 }
 
 @media (min-width: 769px) {
-  .movil-nav {
-    display: none;
-
-  }
-
-  .menu {
-    display: flex;
-  }
-
+    .movil-nav {
+        display: none;
+    }
+    .menu {
+        display: flex;
+    }
 }
 
 .side-menu {
-  position: fixed;
-  top: 64px;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: rgba( 33, 33, 33, 0.8 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 20px );
--webkit-backdrop-filter: blur( 20px );
-
-border: 1px solid rgba( 255, 255, 255, 0.18 );
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  transform: translateX(+100%);
-  transition: all ease-out .5s;
-
-  & a {
-    color: #fff;
-    margin: 0 16px;
-    text-decoration: none;
-    transition: 0.4s;
-    padding: 8px 16px;
-    text-transform: uppercase;
-    font-size: 30px;
-
-    &:hover {
-
-      text-shadow: 0 0 5px rgba(0, 178, 255, 1),
-        0 0 10px rgba(0, 178, 255, 1),
+    position: fixed;
+    top: 64px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba( 33, 33, 33, 0.8);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 20px);
+    -webkit-backdrop-filter: blur( 20px);
+    border: 1px solid rgba( 255, 255, 255, 0.18);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transform: translateX(+100%);
+    transition: all ease-out .5s;
+    & a {
+        color: #fff;
+        margin: 0 16px;
+        text-decoration: none;
+        transition: 0.4s;
+        padding: 8px 16px;
+        text-transform: uppercase;
+        font-size: 30px;
+        &:hover {
+            text-shadow: 0 0 5px rgba(0, 178, 255, 1), 0 0 10px rgba(0, 178, 255, 1),
+        }
     }
-  }
-
-  ul {
-    text-align: center;
-    padding-top: 50px;
-
-    li {
-      padding: 20px;
-      text-decoration: none;
+    ul {
+        text-align: center;
+        padding-top: 50px;
+        li {
+            padding: 20px;
+            text-decoration: none;
+        }
     }
-  }
-
-  &.active {
-    transform: translateX(0);
-  }
+    &.active {
+        transform: translateX(0);
+    }
 }
-
-
