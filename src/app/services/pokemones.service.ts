@@ -8,13 +8,17 @@ import { environment } from './../../environments/environment';
 export class PokemonesService {
 
   API = environment.API;
+
+
   constructor(private http: HttpClient) { }
 
-  getPokemons(){
-    return this.http.get(`${this.API}/pokemon?limit=20`);
+  getPokemons(limit: number, offset: number){
+    return this.http.get(`${this.API}/pokemon?limit=${limit}&offset=${offset}`);
   }
 
-  getMoreData(name:string){
-    return this.http.get(`${this.API}/pokemon/${name}`);
+  getMoreData(id: any){
+    return this.http.get(`${this.API}/pokemon/${id}`);
   }
+
+
 }

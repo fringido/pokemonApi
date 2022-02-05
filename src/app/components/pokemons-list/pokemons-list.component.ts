@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PokemonesService } from 'src/app/services/pokemones.service';
 
 @Component({
@@ -9,23 +10,38 @@ import { PokemonesService } from 'src/app/services/pokemones.service';
 export class PokemonsListComponent implements OnInit {
 
   pokemons: any[] = [];
+  page = 1;
+  totalPokemones: number | undefined;
+  showPokemonDetail = false;
 
   constructor(
-    private pokemonService: PokemonesService
+    private pokemonService: PokemonesService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
-    this.pokemonService.getPokemons()
+  this.getPokmons();
+  }
+
+  getPokmons(){
+    this.pokemonService.getPokemons(12, this.page + 0)
     .subscribe((response: any) => {
+      this.totalPokemones = response.count;
       response.results.forEach((result: { name: string; }) =>{
         this.pokemonService.getMoreData(result.name)
         .subscribe((uniqResponse:any) =>{
           this.pokemons.push(uniqResponse);
-          console.log(this.pokemons);
         }
         )
       })
     })
   }
 
+  togglePokemonDetail(){
+    this.showPokemonDetail = !this.showPokemonDetail;
+  }
+
+  getPokemon(pokemon: any){
+    this.router.navigateByUrl(`pokemon/${pokemon.id}`);
+  }
 }

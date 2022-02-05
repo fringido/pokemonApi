@@ -11,6 +11,8 @@ import { ErrorComponent } from './pages/error/error.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PokemonComponent } from './pages/pokemon/pokemon.component';
 import { AppRoutingModule } from './app-routing.module';
+import { CardPokemonComponent } from './components/card-pokemon/card-pokemon.component';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -20,13 +22,15 @@ import { AppRoutingModule } from './app-routing.module';
     NavComponent,
     ErrorComponent,
     HomeComponent,
-    PokemonComponent
+    PokemonComponent,
+    CardPokemonComponent
   ],
   imports: [
     BrowserModule,
     MaterialModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

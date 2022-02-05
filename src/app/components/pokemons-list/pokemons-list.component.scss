@@ -1,37 +1,81 @@
+@import '../../../styles.scss';
+
 .pokemon--grid {
-    background: rgba( 33, 33, 33, 0.7);
-    backdrop-filter: blur( 9px);
-    -webkit-backdrop-filter: blur( 9px);
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: grid;
+  grid-gap: 18px;
+  padding: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(23%, 1fr));
+
+  & .box {
+    width: 100%;
+    height: 300px;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow: 8px 8px 16px #afafaf,
+      -8px -8px 16px #ffffff;
+    display: grid;
+    text-align: center;
     text-transform: capitalize;
+
+    & img {
+      max-width: 100px;
+      display: block;
+      margin: 0 auto;
+    }
+  }
 }
 
 @media screen and (min-width: 40em) and (max-width: 63.9em) {
-    .pokemon--grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 15px;
-    }
+  .pokemon--grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+  }
 }
 
 // web
 @media screen and (min-width: 64em) {
-    .pokemon--grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: 15px;
-    }
+  .pokemon--grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+  }
 }
 
 .pokemon--grid__box {
-    background: rgba( 33, 33, 33, 0.5);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
-    backdrop-filter: blur( 9px);
-    -webkit-backdrop-filter: blur( 9px);
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18);
+  background: rgba(33, 33, 33, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+pagination-controls {
+  background-color: $darkPrincipal;
+  color: $darkPrincipal;
+  text-align: center;
+}
+
+.my-pagination .ngx-pagination .current {
+  background: red;
+}
+
+.pokemon-detail {
+  background:#e0e0e0;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: all ease-out .5s;
+  transform: translateX(100%);
+
+  &.active {
+    transform: translateX(0);
+  }
 }

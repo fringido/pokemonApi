@@ -33,14 +33,16 @@ $mb-3: 3rem;
 }
 
 html {
-    scroll-behavior: smooth;
-    background-image: url('/assets/images/fondo.jpg');
+    // scroll-behavior: smooth;
+    // background-image: url('/assets/images/fondo.jpg');
 }
 
 body {
     // filter: blur(4px);
-    backdrop-filter: blur(2px);
+    // backdrop-filter: blur(2px);
+    background:#e0e0e0;
+
     font-family: 'Open Sans', sans-serif;
     font-size: $normal-font;
-    color: $ligth;
+    color: $darkPrincipal;
 }

@@ -1,17 +1,5 @@
-<nav>
-    <div class="container" [class.active]="activeMenu">
-        <h1>
-            POKEDEX
-        </h1>
-        <div class="menu">
-            <a href="# " class=" ">Entrenador</a>
-
-        </div>
-        <button class="movil-nav " (click)="toggleMenu()">
-
-      </button>
-    </div>
-    <div class="side-menu" [class.active]="activeMenu">
-
-    </div>
-</nav>
+<mat-toolbar>
+    <mat-toolbar-row>
+        <h1 (click)="home()">Pokedex </h1>
+    </mat-toolbar-row>
+</mat-toolbar>
