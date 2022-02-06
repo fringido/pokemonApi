@@ -4,8 +4,8 @@
   margin: 5px;
    display: grid;
 
-            grid-template-columns: repeat(2, 1fr);
-            grid-gap: 15px;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 30px;
 
   & .box {
     width: 100%;
@@ -54,30 +54,13 @@ pagination-controls {
   background: red;
 }
 
-.pokemon-detail {
-  background: #e0e0e0;
-  position: fixed;
-  top: 0;
-  left: 50%;
-  bottom: 0;
-  right: 0;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  transition: all ease-out .5s;
-  transform: translateX(100%);
 
-  &.active {
-    transform: translateX(0);
-  }
-}
 
 .input--search {
   & input {
     font-size: 25px;
     border: none;
-    width: 500px;
+    width: 250px;
     text-align: center;
     border-top: 15px;
     margin-top: 25px;
