@@ -24,7 +24,7 @@ export class PokemonsListComponent implements OnInit {
   }
 
   getPokmons(){
-    this.pokemonService.getPokemons(12, this.page + 0)
+    this.pokemonService.getPokemons(20, this.page + 0)
     .subscribe((response: any) => {
       this.totalPokemones = response.count;
       response.results.forEach((result: { name: string; }) =>{

@@ -11,7 +11,7 @@
 
         <div class="right-column">
             <div>
-                <h2>{{pokemon.name}}</h2>
+                <h1>{{pokemon.name}}</h1>
                 <h6>#{{pokemon.id}}</h6>
 
             </div>
@@ -26,12 +26,14 @@
 
         <div class="right-column">
             <div>
-                <h2>Estadisticas</h2>
-                <h2>{{pokemonStats}}</h2>
-                <mat-progress-bar mode="determinate" value="{{pokemonStats}}"></mat-progress-bar>
+                <h1>Estadisticas</h1>
+                <h3>HP: {{pokemon.stats[5].base_stat}}</h3>
+                <h3>Ataque: {{pokemon.stats[5].base_stat}}</h3>
+                <h3>Ataque: {{pokemon.stats[3].base_stat}}</h3>
+                <h3>Sp. Attack: {{pokemon.stats[2].base_stat}}</h3>
+                <h3>Sp. Defense: {{pokemon.stats[1].base_stat}}</h3>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, sintLorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, sint??</p>
         </div>
-
     </div>
+
 </div>

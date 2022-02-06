@@ -1,4 +1,5 @@
-:root{
+
+  :root{
 	--white-text:#fff;
 	--background:#c8e8f1;
 	--black-text:rgb(68, 66, 66)
@@ -32,6 +33,10 @@ box-shadow:  13px 13px 26px #d0d0d0,
 	overflow: hidden;
 	width: 35rem;
 	height: 23rem;
+  text-transform: capitalize;
+  & h3{
+    margin-top: 5px;
+    }
     & img{
       margin-top: 60px;
     width: 150px

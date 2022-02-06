@@ -12,7 +12,6 @@ export class PokemonComponent implements OnInit {
   pokemon: any = '';
   pokemonType = [];
   pokemonImg = '';
-  pokemonStats = [];
 
   constructor(
     private pokemonService: PokemonesService,
@@ -33,8 +32,6 @@ export class PokemonComponent implements OnInit {
       this.pokemon = res;
       this.pokemonImg = this.pokemon.sprites.front_default;
       this.pokemonType = this.pokemon.types[0].type.name;
-      this.pokemonStats = this.pokemon.stats[0].base_stat;
-      console.log(this.pokemonStats);
 
     });
   }

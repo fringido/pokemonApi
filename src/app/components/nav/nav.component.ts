@@ -4,22 +4,22 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.scss']
+  styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent implements OnInit {
   activeMenu = false;
-  constructor(
-    private router: Router
-  ) { }
+  constructor(private router: Router) {}
 
-  ngOnInit(): void {
-  }
-    toggleMenu() {
+  ngOnInit(): void {}
+  toggleMenu() {
     this.activeMenu = !this.activeMenu;
   }
 
-  home(){
-    this.router.navigateByUrl('')
-;  }
+  home() {
+    this.router.navigateByUrl('');
+  }
 
+  toggleEntrenador() {
+    this.activeMenu = !this.activeMenu;
+  }
 }

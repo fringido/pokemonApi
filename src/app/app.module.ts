@@ -13,6 +13,7 @@ import { PokemonComponent } from './pages/pokemon/pokemon.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CardPokemonComponent } from './components/card-pokemon/card-pokemon.component';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
     MaterialModule,
     HttpClientModule,
     AppRoutingModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

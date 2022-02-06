@@ -14,3 +14,84 @@ box-shadow:  5px 5px 18px #b8b8b8,
 
     }
 }
+
+  .persona--nav{
+    background: none;
+    border: none;
+    img{
+      margin-right: 50px;
+      border-radius: 50%;
+background: #e0e0e0;
+box-shadow:  7px 7px 14px #bebebe,
+             -7px -7px 14px #ffffff;
+      width: 65px;
+      }
+
+    }
+
+  .boton_espacio{
+
+      & img{
+        width: 40px;
+        justify-self: end;
+        }
+    }
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.entrenador-detail {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  bottom: 0;
+  right: 0;
+  background-color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: all ease-out .5s;
+  transform: translateX(100%);
+  &.active{
+    transform: translateX(0);
+  }
+  & h1{
+    margin-bottom: 20px;
+    text-align: center;
+    }
+  & h2{
+    margin: 10px;
+    margin-bottom: 20px;
+    }
+  & h3{
+    margin-bottom: 20px;
+    margin-left: 25px;
+    }
+}
+.home__img{
+  width: 300px;
+  }
+
+  .home__blob-img {
+    width: 170px;
+}
+.imagen--entrenador{
+    align-self: center;
+  }
+
+.botton--cerrar{
+  & button{
+    padding: 5px;
+    margin-left: 25px;
+    margin-top: 30px;
+    border: none;
+    font-size: 25px;
+  color: red;
+  border-radius: 76px;
+background: #e0e0e0;
+box-shadow:  9px 9px 18px #9b9b9b,
+             -9px -9px 18px #ffffff;
+    }
+
+  }
