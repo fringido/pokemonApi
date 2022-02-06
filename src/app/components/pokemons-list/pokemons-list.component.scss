@@ -37,7 +37,14 @@
 @media screen and (min-width: 64em) {
   .pokemon--grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+  }
+}
+  @media screen and (max-width:425px )  {
+  .pokemon--grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
     grid-gap: 15px;
   }
 }
@@ -79,3 +86,20 @@ pagination-controls {
     transform: translateX(0);
   }
 }
+
+.input--search{
+  & input{
+    font-size: 25px;
+    border: none;
+    width: 500px;
+    text-align: center;
+    border-top: 15px;
+  margin-top:  25px;
+  margin-left: 30px;
+  padding: 10px;
+  border-radius: 81px;
+background: #e0e0e0;
+box-shadow: inset 6px 6px 5px #9b9b9b,
+            inset -6px -6px 5px #ffffff;
+    }
+  }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { PokemonesService } from 'src/app/services/pokemones.service';
 
 @Component({
@@ -15,7 +15,8 @@ export class PokemonComponent implements OnInit {
 
   constructor(
     private pokemonService: PokemonesService,
-    private activatedRouter: ActivatedRoute
+    private activatedRouter: ActivatedRoute,
+    private router: Router
   ) {
     this.activatedRouter.params.subscribe(
       params => {
@@ -35,4 +36,8 @@ export class PokemonComponent implements OnInit {
 
     });
   }
+
+  home(){
+    this.router.navigateByUrl('');
+   }
 }

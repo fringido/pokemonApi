@@ -19,6 +19,8 @@ export class PokemonsListComponent implements OnInit {
     private router: Router
   ) { }
 
+  filterPost = '';
+
   ngOnInit(): void {
   this.getPokmons();
   }
