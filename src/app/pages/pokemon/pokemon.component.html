@@ -2,33 +2,31 @@
     <button (click)="home()"><----- Regresar</button>
 </div>
 <div class="container">
-    <div class="card">
-        <div class="left-column background1-left-column">
+
+    <div class="card card-pokemon">
+        <div class="card--container">
             <div>
                 <img src="{{pokemonImg}}" alt="">
-
             </div>
-
-            <i class="fa fa-github"></i>
         </div>
-
-        <div class="right-column">
+    </div>
+    <div class="card">
+        <div class="card--container">
             <div>
                 <h1>{{pokemon.name}}</h1>
                 <h6>#{{pokemon.id}}</h6>
 
             </div>
-            <h3>Tipo: {{pokemonType}}</h3>
-            <h3>Height: {{pokemon.height}}</h3>
-            <h3>Weight: {{pokemon.weight}}</h3>
+            <h2>Tipo: {{pokemonType}}</h2>
+            <h2>Height: {{pokemon.height}}</h2>
+            <h2>Weight: {{pokemon.weight}}</h2>
         </div>
-
     </div>
 
     <div class="card">
 
-        <div class="right-column">
-            <div>
+        <div class="card--container">
+            <div class="container--stats">
                 <h1>Estadisticas</h1>
                 <h3>HP: {{pokemon.stats[5].base_stat}}</h3>
                 <mat-progress-bar value="{{pokemon.stats[5].base_stat}}"></mat-progress-bar>
@@ -47,5 +45,4 @@
             </div>
         </div>
     </div>
-
 </div>
