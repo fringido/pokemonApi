@@ -31,10 +31,19 @@
             <div>
                 <h1>Estadisticas</h1>
                 <h3>HP: {{pokemon.stats[5].base_stat}}</h3>
-                <h3>Ataque: {{pokemon.stats[5].base_stat}}</h3>
+                <mat-progress-bar value="{{pokemon.stats[5].base_stat}}"></mat-progress-bar>
+
+                <h3>Ataque: {{pokemon.stats[4].base_stat}}</h3>
+                <mat-progress-bar value="{{pokemon.stats[4].base_stat}}"></mat-progress-bar>
+
                 <h3>Ataque: {{pokemon.stats[3].base_stat}}</h3>
+                <mat-progress-bar value="{{pokemon.stats[3].base_stat}}"></mat-progress-bar>
+
                 <h3>Sp. Attack: {{pokemon.stats[2].base_stat}}</h3>
+                <mat-progress-bar value="{{pokemon.stats[2].base_stat}}"></mat-progress-bar>
+
                 <h3>Sp. Defense: {{pokemon.stats[1].base_stat}}</h3>
+                <mat-progress-bar value="{{pokemon.stats[1].base_stat}}"></mat-progress-bar>
             </div>
         </div>
     </div>

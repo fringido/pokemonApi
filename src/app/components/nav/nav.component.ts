@@ -14,12 +14,13 @@ export class NavComponent implements OnInit {
 
   ngOnInit(): void {
   }
-    toggleMenu() {
-    this.activeMenu = !this.activeMenu;
-  }
 
   home(){
     this.router.navigateByUrl('');
+   }
+
+   perfil(){
+    this.router.navigateByUrl('perfil');
    }
 
    toggleEntrenador(){

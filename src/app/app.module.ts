@@ -15,6 +15,7 @@ import { CardPokemonComponent } from './components/card-pokemon/card-pokemon.com
 import {NgxPaginationModule} from 'ngx-pagination';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FilterPipe } from './pipe/filter.pipe';
+import { PerfilComponent } from './pages/perfil/perfil.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FilterPipe } from './pipe/filter.pipe';
     HomeComponent,
     PokemonComponent,
     CardPokemonComponent,
-    FilterPipe
+    FilterPipe,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,

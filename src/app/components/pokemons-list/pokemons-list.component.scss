@@ -1,10 +1,11 @@
 @import '../../../styles.scss';
 
 .pokemon--grid {
-  display: grid;
-  grid-gap: 18px;
-  padding: 25px;
-  grid-template-columns: repeat(auto-fit, minmax(23%, 1fr));
+  margin: 5px;
+   display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 15px;
 
   & .box {
     width: 100%;
@@ -24,11 +25,11 @@
     }
   }
 }
-
+//tablet
 @media screen and (min-width: 40em) and (max-width: 63.9em) {
   .pokemon--grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 15px;
   }
 }
@@ -37,26 +38,11 @@
 @media screen and (min-width: 64em) {
   .pokemon--grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 15px;
-  }
-}
-  @media screen and (max-width:425px )  {
-  .pokemon--grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 15px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 15px;
   }
 }
 
-.pokemon--grid__box {
-  background: rgba(33, 33, 33, 0.5);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(9px);
-  -webkit-backdrop-filter: blur(9px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-}
 
 pagination-controls {
   background-color: $darkPrincipal;
@@ -69,7 +55,7 @@ pagination-controls {
 }
 
 .pokemon-detail {
-  background:#e0e0e0;
+  background: #e0e0e0;
   position: fixed;
   top: 0;
   left: 50%;
@@ -87,19 +73,20 @@ pagination-controls {
   }
 }
 
-.input--search{
-  & input{
+.input--search {
+  & input {
     font-size: 25px;
     border: none;
     width: 500px;
     text-align: center;
     border-top: 15px;
-  margin-top:  25px;
-  margin-left: 30px;
-  padding: 10px;
-  border-radius: 81px;
-background: #e0e0e0;
-box-shadow: inset 6px 6px 5px #9b9b9b,
-            inset -6px -6px 5px #ffffff;
-    }
+    margin-top: 25px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 81px;
+    background: #e0e0e0;
+    box-shadow: inset 6px 6px 5px #9b9b9b,
+      inset -6px -6px 5px #ffffff;
   }
+}
